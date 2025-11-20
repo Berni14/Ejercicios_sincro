@@ -29,11 +29,11 @@ public class App {
             j1d1.lanzar();
             j1d2.lanzar();
 
-            int suma1 = j1d1.getValorActual() + j1d2.getValorActual(); // CORREGIDO
+            int suma1 = j1d1.getValorActual() + j1d2.getValorActual();
 
             System.out.println(nombre1 + " -> D1: " +
-                j1d1.getValorActual() + ", D2: " +
-                j1d2.getValorActual() + " | Suma: " + suma1);
+                    j1d1.getValorActual() + ", D2: " +
+                    j1d2.getValorActual() + " | Suma: " + suma1);
 
             boolean bonus1 = false;
             if (j1d1.getValorActual() == j1d2.getValorActual() && j1d1.esPar()) {
@@ -46,8 +46,8 @@ public class App {
             int suma2 = j2d1.getValorActual() + j2d2.getValorActual();
 
             System.out.println(nombre2 + " -> D1: " +
-                j2d1.getValorActual() + ", D2: " +
-                j2d2.getValorActual() + " | Suma: " + suma2);
+                    j2d1.getValorActual() + ", D2: " +
+                    j2d2.getValorActual() + " | Suma: " + suma2);
 
             boolean bonus2 = false;
             if (j2d1.getValorActual() == j2d2.getValorActual() && j2d1.esPar()) {
