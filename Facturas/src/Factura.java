@@ -1,7 +1,6 @@
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.time.temporal.ChronoUnit;
 import java.util.Random;
 
 public class Factura {
@@ -56,11 +55,12 @@ public class Factura {
             return true;
         }
     }
-// HECHA
+
+    // HECHA
     public boolean esAntigua() {
         LocalDate hoy = LocalDate.now();
-        long dias = ChronoUnit.DAYS.between(fecha, hoy);
-        return dias > 30;
+        
+        return fecha.isBefore(hoy.minusDays(30));
     }
 
     // GETTERS Y SETTERS
@@ -109,13 +109,12 @@ public class Factura {
     @Override
     public String toString() {
         return "Número de factura: " + numeroFactura +
-               "\nFecha: " + getFecha() +
-               "\nConcepto: " + concepto +
-               "\nBase imponible: " + base +
-               "\nIVA (" + iva + "%): " + (base * iva / 100) +
-               "\nTotal a pagar: " + calcularTotal();
+                "\nFecha: " + getFecha() +
+                "\nConcepto: " + concepto +
+                "\nBase imponible: " + base +
+                "\nIVA (" + iva + "%): " + (base * iva / 100) +
+                "\nTotal a pagar: " + calcularTotal();
     }
-
 
     // HECHA
     public void imprimirFactura() {
