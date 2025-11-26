@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class Dados {
     private int numeroCaras, valorActual, ultimoValor;
-    private Random aleatorio;
+    private Random aleatorio;                                    
 
     Dados(int numeroCaras) {
         this.numeroCaras = numeroCaras;
